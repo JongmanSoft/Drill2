@@ -1,13 +1,18 @@
 from pico2d import *
 
 open_canvas()
+hide_lattice()
+
+x = 0
 
 grass = load_image('grass.png')
-character = load_image('character.png')
+boy = load_image('character.png')
 
-grass.draw_now(400,30)
-character.draw_now(400,90)
+while(x<800):
+    clear_canvas_now()
+    grass.draw_now(400,30)
+    boy.draw_now(x,90)
+    x = x+2
+    delay(0.01)
 
-# fill here
-delay(5)
 close_canvas()

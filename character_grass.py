@@ -7,12 +7,10 @@ x = 0
 
 grass = load_image('grass.png')
 boy = load_image('character.png')
+grass.draw(400,30)
+for i in range(0,10):
+    for j in range(0,10):
+        boy.draw_now(i*80 , j*60)
 
-while(x<800):
-    clear_canvas_now()
-    grass.draw_now(400,30)
-    boy.draw_now(x,90)
-    x = x+2
-    delay(0.01)
-
+delay(3)
 close_canvas()
